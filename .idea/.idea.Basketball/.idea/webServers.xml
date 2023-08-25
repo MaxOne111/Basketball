@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3ce4255a-ea48-47c9-b3df-5cad2b69c80b" name="Dial">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="37.27.7.60" port="22" sshConfigId="8f17c4c3-1ef2-416d-a33e-057443ec0984" sshConfig="root@37.27.7.60:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
