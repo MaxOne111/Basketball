@@ -20,6 +20,11 @@ public class RequestToServer : MonoBehaviour
       StartCoroutine(SendRequest());
    }
 
+   private void Start()
+   {
+      StartSending();
+   }
+
    private IEnumerator SendRequest()
    {
 
@@ -45,21 +50,19 @@ public class RequestToServer : MonoBehaviour
    private string ProcessedAnswer(UnityWebRequest _request)
    {
       string[] _substring = _request.downloadHandler.text.Split(':');
-      string _unprocessed_answer;
       string _answer;
 
       if (_substring.Length > 2)
       {
          _substring[2] = _substring[2].Remove(0, 1);
-         _unprocessed_answer = _substring[1] + ":/" + _substring[2];
+         _answer = _substring[1] + ":/" + _substring[2];
       }
       else
       {
-         _unprocessed_answer = _substring[1];
+         _answer = _substring[1];
       }
-      _answer = _unprocessed_answer.Trim('{', '}', '"');
-      _answer = _answer.Replace("\\", "/");
-      
+      _answer = _answer.Trim('{', '}', '"');
+
       return _answer;
    }
 

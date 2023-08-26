@@ -16,10 +16,6 @@ public class HitSystem : MonoBehaviour
     [SerializeField] private float _Min_X_Position;
     [SerializeField] private float _Max_X_Position;
 
-    [Space] [SerializeField] private RequestToServer _Request;
-    [Range(0, 100)]
-    [SerializeField] private float _Request_Chance;
-
     private float _Three_Point_Distance = 7f;
 
     public bool IsHit { get; private set; }
@@ -47,12 +43,6 @@ public class HitSystem : MonoBehaviour
         }
         
         PlayerData.SaveData();
-
-        float _chance = Random.Range(0, 100);
-        if (_chance < _Request_Chance)
-        {
-            _Request.StartSending();
-        }
     }
 
     private void Miss()
