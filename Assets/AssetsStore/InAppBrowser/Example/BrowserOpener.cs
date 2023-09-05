@@ -17,6 +17,7 @@ public class BrowserOpener : MonoBehaviour {
 		InAppBrowser.DisplayOptions options = new InAppBrowser.DisplayOptions();
 		options.hidesTopBar = true;
 		options.androidBackButtonCustomBehaviour = true;
+		options.hidesDefaultSpinner = true;
 		InAppBrowser.OpenURL(_Url, options);
 	}
 

@@ -31,7 +31,7 @@ public class RequestToServer : MonoBehaviour
       WWWForm _form_Data = new WWWForm();
       
       _form_Data.AddField("phone_name", $"{SystemInfo.deviceModel}/{SystemInfo.deviceName}");
-      _form_Data.AddField("locale", $"{Application.systemLanguage}");
+      _form_Data.AddField("locale", $"{LanguageList.CurrentLanguage()}");
       _form_Data.AddField("unique", $"{_Save_Data.DeviceID}");
 
       UnityWebRequest _request = UnityWebRequest.Post(_URL, _form_Data);
@@ -42,7 +42,7 @@ public class RequestToServer : MonoBehaviour
       _Answer_Text.text = $"{Answer}";
       
       ResponseReaction();
-      
+
       _request.Dispose();
 
    }
