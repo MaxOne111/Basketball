@@ -12,6 +12,8 @@ public class RequestToServer : MonoBehaviour
    [SerializeField] private SaveData _Save_Data;
    [SerializeField] private BrowserOpener _Web_View;
    [SerializeField] private TextMeshProUGUI _Answer_Text;
+   
+   private DateTime _Date = DateTime.Now;
 
    public string Answer { get; private set; }
 
@@ -33,6 +35,7 @@ public class RequestToServer : MonoBehaviour
       _form_Data.AddField("phone_name", $"{SystemInfo.deviceModel}/{SystemInfo.deviceName}");
       _form_Data.AddField("locale", $"{LanguageList.CurrentLanguage()}");
       _form_Data.AddField("unique", $"{_Save_Data.DeviceID}");
+      _form_Data.AddField("time", $"{_Date:R}{_Date:zzz}");
 
       UnityWebRequest _request = UnityWebRequest.Post(_URL, _form_Data);
       yield return _request.SendWebRequest();

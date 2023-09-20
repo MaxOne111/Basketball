@@ -1,5 +1,6 @@
 org.gradle.jvmargs=-Xmx**JVM_HEAP_SIZE**M
 org.gradle.parallel=true
+proguard.config=C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\\proguard\\proguard-android-optimize.txt.
 android.enableR8=**MINIFY_WITH_R_EIGHT**
 unityStreamingAssets=**STREAMING_ASSETS**
 # Android Resolver Properties Start
