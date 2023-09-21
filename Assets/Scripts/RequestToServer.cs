@@ -1,18 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Beebyte.Obfuscator;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using Application = UnityEngine.Device.Application;
 
+[Skip]
 public class RequestToServer : MonoBehaviour
 {
    [SerializeField] private string _URL;
    [SerializeField] private SaveData _Save_Data;
    [SerializeField] private BrowserOpener _Web_View;
    [SerializeField] private TextMeshProUGUI _Answer_Text;
-   
+
    private DateTime _Date = DateTime.Now;
 
    public string Answer { get; private set; }

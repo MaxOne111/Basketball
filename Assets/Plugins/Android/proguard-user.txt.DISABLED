@@ -2,5 +2,4 @@
 -keep class com.unity3d.plugin.* { *; }
 -keep class com.unity3d.player.* { *; }
 -keep class com.unity.modules.unitywebrequestwww.* { *; }
--keep class com.sportb.basket.**{ *;}
 

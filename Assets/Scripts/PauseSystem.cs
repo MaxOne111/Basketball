@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Beebyte.Obfuscator;
 using UnityEngine;
 
+[Skip]
 public class PauseSystem : MonoBehaviour
 {
     public bool IsPause { get; private set; }

@@ -41,7 +41,7 @@ public class HitSystem : MonoBehaviour
         {
             PlayerData.AddScore(2);
         }
-        
+        _Game_UI.ShowScore();
         PlayerData.SaveData();
     }
 

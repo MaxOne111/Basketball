@@ -23,7 +23,7 @@ public class GameUI : MonoBehaviour
         ShowScore();
     }
 
-    private void ShowScore()
+    public void ShowScore()
     {
         _Score_Text.text = $"Score: {PlayerData.Score}";
     }
